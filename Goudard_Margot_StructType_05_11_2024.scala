@@ -23,3 +23,13 @@ val df = spark.read
 println(s"\nCount of records in CSV file: ${df.count()}")
 df.printSchema()
 df.show(5)
+
+// COMMAND ----------
+
+import spark.implicits._
+
+println("\nCount tag null: " + df.filter(col("tag").isNull).count())
+
+// COMMAND ----------
+
+df.createOrReplaceTempView("starckoverflow")
