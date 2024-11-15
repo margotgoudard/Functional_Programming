@@ -1,7 +1,6 @@
 // Databricks notebook source
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions._  // Import for col and other functions
-import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.functions._  
 
 val filePath = "/FileStore/tables/people_data.csv"
 
